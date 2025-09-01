@@ -1,0 +1,381 @@
+/* --- General Setup & Variables --- */
+:root {
+    --dark-bg: #0D0D10;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0B0;
+    --accent-blue: #3A82F6;
+    --card-bg: #1A1A1E;
+    --border-color: #2A2A30;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Starry Background --- */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        1869px 1292px #FFF, 1965px 399px #FFF, 856px 635px #FFF, 124px 1752px #FFF, 
+        1594px 1192px #FFF, 1269px 929px #FFF, 1219px 1238px #FFF, 1435px 1106px #FFF, 
+        739px 1475px #FFF, 24px 1391px #FFF, 1191px 1983px #FFF, 1319px 586px #FFF, 
+        1557px 1101px #FFF, 26px 1139px #FFF, 1394px 1864px #FFF, 273px 1236px #FFF, 
+        1469px 1134px #FFF, 1685px 1146px #FFF, 1693px 1823px #FFF, 114px 183px #FFF, 
+        1612px 653px #FFF, 629px 825px #FFF, 195px 129px #FFF, 49px 1502px #FFF, 
+        1369px 111px #FFF, 1512px 1779px #FFF, 1891px 113px #FFF, 355px 135px #FFF, 
+        1433px 1152px #FFF, 1162px 1716px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        1124px 85px #FFF, 187px 982px #FFF, 1435px 1464px #FFF, 1572px 164px #FFF, 
+        1074px 1568px #FFF, 836px 143px #FFF, 102px 1735px #FFF, 164px 135px #FFF, 
+        1031px 1708px #FFF, 1563px 1599px #FFF, 1083px 1232px #FFF, 1785px 813px #FFF, 
+        122px 1494px #FFF, 762px 105px #FFF, 115px 95px #FFF, 150px 1526px #FFF, 
+        552px 259px #FFF, 1158px 1259px #FFF, 1515px 768px #FFF, 893px 1279px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        1593px 1269px #FFF, 73px 1498px #FFF, 1261px 1974px #FFF, 429px 1381px #FFF, 
+        1388px 1968px #FFF, 1836px 148px #FFF, 1952px 1233px #FFF, 130px 1138px #FFF, 
+        538px 1152px #FFF, 1162px 1537px #FFF;
+    animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+/* --- Navigation Bar --- */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    background: rgba(13, 13, 16, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+/* --- Content Sections --- */
+.content-section {
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+/* --- Profile Section --- */
+#profile {
+    position: relative;
+    z-index: 10;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-blue);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    background-color: var(--card-bg);
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+/* --- Projects Section --- */
+#projects-container {
+    justify-content: flex-start;
+    padding-top: 6rem;
+}
+
+.projects-viewport {
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects-wrapper {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-category {
+    width: 33.333%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(58, 130, 246, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-stack span {
+    background-color: rgba(58, 130, 246, 0.1);
+    color: var(--accent-blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* --- Contact Section --- */
+.contact-info {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-content h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-button {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #2a6fdf;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    .content-section {
+        padding: 4rem 1rem;
+    }
+    .project-category {
+        grid-template-columns: 1fr;
+    }
+    .modal-actions {
+        flex-direction: column;
+    }
+    .nav-container {
+        padding: 0 1rem;
+    }
+}
+/* --- Clickable Project Title --- */
+.projects-title-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 4rem;
+}
+
+#projects-heading {
+    margin-bottom: 0.25rem;
+}
+
+.more-projects-hint {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.more-projects-hint span {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.projects-title-container:hover .more-projects-hint span {
+    color: white;
+    text-shadow: 
+        0 0 0.5px #0D0D10,
+        0 0 10px #1691e8,
+        0 0 15px #1691e8;
+}

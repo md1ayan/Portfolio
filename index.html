@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Ayan | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="stars-container">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </div>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#profile" class="nav-logo">Mohammed Ayan</a>
+      <ul class="nav-links">
+        <li><a href="#" id="projects-nav-link">Projects</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="profile" class="content-section">
+      <img src="placeholder.jpg" alt="Mohammed Ayan" class="profile-picture">
+
+      <h1 class="main-heading">Mohammed Ayan</h1>
+      <p class="sub-heading">
+        B.Tech in Computer Science and Engineering<br>
+        <a href="https://vit.ac.in/" target="_blank" rel="noopener noreferrer">Vellore Institute of Technology</a>
+      </p>
+      <div class="profile-details">
+        <p>
+          <strong>Interests & Hobbies:</strong> Building neural networks, applying automation to real life using machine
+          learning & deep learning and software engineering.
+        </p>
+        <p>
+          <strong>Seeking Roles:</strong> Data Scientist, Data Analyst, ML Engineer, AI Engineer, Software Engineer.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects-container" class="content-section">
+      <div class="projects-title-container">
+        <h2 id="projects-heading">My Projects</h2>
+        <div class="more-projects-hint">
+          <span>(Click here for more projects)</span>
+        </div>
+      </div>
+      <div class="projects-viewport">
+        <div class="projects-wrapper">
+
+          <div id="ml-projects" class="project-category">
+            <div class="project-card">
+              <h3>Voice-Based Chatbot for Thalassemia Patients</h3>
+              <p>A multilingual voice-based chatbot to support thalassemia patients with daily symptom tracking and
+                emotional check-ins, using NLP to generate health reports for doctors.</p>
+              <div class="tech-stack">
+                <span>Python</span>
+                <span>Hugging Face</span>
+                <span>Google Speech APIs</span>
+                <span>Flask</span>
+              </div>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div class="project-card">
+              <h3>Predicting Personal Loan Uptake</h3>
+              <p>Developed a Decision Tree model with 94% accuracy to predict loan acceptance among bank customers based
+                on attributes like income, education, and product holdings.</p>
+              <div class="tech-stack">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+              </div>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+
+          <div id="software-projects" class="project-category">
+            <div class="project-card">
+              <h3>GYM BRO (AI Fitness and Nutrition App)</h3>
+              <p>A cross-platform fitness app integrating an AI assistant, gamified user progress, and food macro
+                tracking using React Native and OpenAI API.</p>
+              <div class="tech-stack">
+                <span>React Native</span>
+                <span>OpenAI API</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Stripe</span>
+              </div>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+
+          <div id="misc-projects" class="project-category">
+            <div class="project-card">
+              <h3>Miscellaneous Project Title</h3>
+              <p>A brief description of your project goes here. Explain what it does and why it's interesting.</p>
+              <div class="tech-stack">
+                <span>Tech 1</span>
+                <span>Tech 2</span>
+                <span>Tech 3</span>
+              </div>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Get In Touch</h2>
+      <p>I'm always open to discussing new opportunities and creative ideas.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:md.ayanenzo@gmail.com">md.ayanenzo@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919972582521">+91 9972582521</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="projects-modal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3>Select a Project Category</h3>
+      <div class="modal-actions">
+        <button class="modal-button" data-target="ml-projects">Machine Learning</button>
+        <button class="modal-button" data-target="software-projects">Software</button>
+        <button class="modal-button" data-target="misc-projects">Miscellaneous</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
