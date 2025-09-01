@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal portfolio website. This is a fully responsive, single-page site built with clean HTML, CSS, and JavaScript, showcasing my projects, skills, and contact information.
 
-Deployed Vercel link: https://portfolio-nine-mauve-70.vercel.app/
+Deployed Vercel link: https://portfolio-seven-brown-95.vercel.app/
 
 About The Project
 This project is more than just a static page; it's an interactive experience designed to be clean, modern, and engaging. It features a unique starry background that fades on scroll, a dynamic project showcase system with a pop-up and slider, and several other micro-interactions to create a polished user experience.
